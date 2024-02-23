@@ -1,0 +1,42 @@
+abstract class Shape {
+    abstract double area();
+    abstract double perimeter();
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    double area() {
+        return Math.PI * radius * radius;
+    }
+
+    double perimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+class Triangle extends Shape {
+    double base;
+    double height;
+    double side1;
+    double side2;
+
+    Triangle(double base, double height, double side1, double side2) {
+        this.base = base;
+        this.height = height;
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+
+    double area() {
+        return 0.5 * base * height;
+    }
+
+    double perimeter() {
+        return base + side1 + side2;
+    }
+}
